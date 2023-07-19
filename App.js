@@ -8,7 +8,13 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar barStyle={'light-content'} backgroundColor={theme.primaryColorWheel[700]} />
-      <TextComponent>OmniClinic</TextComponent>
+
+      <TextComponent type={'mainTitle'}>Título de destaque</TextComponent>
+      <TextComponent type={'sectionTitle'} color={theme.basePrimaryColor}>Título de seção</TextComponent>
+      <TextComponent type={'subtitle'} color={theme.baseSecondaryColor}>Subtitulo</TextComponent>
+      <TextComponent light>Parágrafo</TextComponent>
+      <TextComponent type={'smallText'} color={theme.baseErrorColor}>Legenda</TextComponent>
+
     </View>
   );
 }
@@ -16,7 +22,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#ccc',
     alignItems: 'center',
     justifyContent: 'center',
   },
