@@ -6,7 +6,7 @@ interface Props {
     children: ReactNode,
     color?: ColorValue,
     light?: Boolean,
-    type?: String,
+    type?: string,
 }
 
 export default function TextComponent(props: Props) {
