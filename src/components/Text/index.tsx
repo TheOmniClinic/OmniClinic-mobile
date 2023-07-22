@@ -1,29 +1,21 @@
 import React, { ReactNode } from "react";
-import { ColorValue, Text } from "react-native";
-import sytles from "./style";
+import { Text } from "react-native";
+
+import textType from "./lib";
 
 interface Props {
     children: ReactNode,
-    color?: ColorValue,
-    light?: Boolean,
-    type?: string,
+    color?: string,
+    light?: boolean,
+    type?: 'xl' | 'l' | 'm' | 'xs',
 }
 
 export default function TextComponent(props: Props) {
-    const properties = {light: props.light, color: props.color};
-    const textStyle = () => {
-        switch(props.type) {
-            case 'mainTitle': return sytles(properties).mainTitle;
-            case 'sectionTitle': return sytles(properties).sectionTitle;
-            case 'subtitle': return sytles(properties).subtitle;
-            case 'smallText': return sytles(properties).smallText;
-            default: return sytles(properties).mainText;
-        }
-    };
+    const properties = { color: props.light ? 'white'  : (props.color || 'black') };
 
-    return <>
-        <Text style={textStyle()}>
+    return (
+        <Text style={textType(properties, props.type)}>
             {props.children}
         </Text>
-    </>
+    );
 }

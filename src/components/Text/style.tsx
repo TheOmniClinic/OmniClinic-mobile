@@ -1,38 +1,32 @@
 import { ColorValue, StyleSheet } from "react-native";
 
 interface Props {
-    light?: Boolean,
     color?: ColorValue,
 }
 
-const sytles = (prop: Props) => StyleSheet.create({
+const sytles = ({ color }: Props) => StyleSheet.create({
     mainTitle: {
         fontSize: 48,
         fontWeight: "bold",
-        color: prop.light ? 'white' 
-        : (prop.color ? prop.color : 'black'),
+        color: color,
     },
     sectionTitle: {
         fontSize: 33,
         fontWeight: "bold",
-        color: prop.light ? 'white' 
-        : (prop.color ? prop.color : 'black'),
+        color:color,
     },
     subtitle: {
         fontSize: 28,
         fontWeight: "700",
-        color: prop.light ? 'white' 
-        : (prop.color ? prop.color : 'black'),
+        color:color,
     },
     mainText: {
         fontSize: 16,
-        color: prop.light ? 'white' 
-        : (prop.color ? prop.color : 'black'),
+        color:color,
     },
     smallText: {
         fontSize: 13,
-        color: prop.light ? 'white' 
-        : (prop.color ? prop.color : 'black'),
+        color:color,
     },
 });
 

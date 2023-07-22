@@ -10,30 +10,8 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar barStyle={'light-content'} backgroundColor={theme.primaryColorWheel[700]} />
 
-      <TextComponent type={'subtitle'}>OmniClinic</TextComponent>
-      <ButtonConponent 
-        onPress={() => { console.log('click') }}
-        title='Botão'
-      />
-      <ButtonConponent 
-        onPress={() => { console.log('click') }}
-        title='Botão'
-        type='outlined'
-        secondary
-      />
-      <ButtonConponent 
-        onPress={() => { console.log('click') }}
-        title='Botão'
-        type='text'
-        secondary
-      />
-      <ButtonConponent 
-        onPress={() => { console.log('click') }}
-        title='Botão'
-        type='text'
-        color='#f00'
-        underline
-      />
+      <TextComponent type='l'>OmniClinic</TextComponent>
+      <ButtonConponent title='Entrar' secondary />
 
     </View>
   );
